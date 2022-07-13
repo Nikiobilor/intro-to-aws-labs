@@ -1,0 +1,24 @@
+Step 1
+Login into your github account, click on create a new repo
+Give your repo the name "intro-to-aws-labs"
+Ensure Public is selected 
+Click create repository
+
+Step 2
+On your local machine, create a folder with name "AWSlabs"
+Open VScode in your local machine, click on "terminal" to open a command line terminal.
+If on Windows (it will have powershell by default), click on drop down button to change this to WSL
+Navigate to the folder with name "AWSlabs"
+Run command git clone https://github.com/awscloudessentials/intro-to-aws-lab.git (this will clone this repo into your local machine)
+Run command cd intro-to-aws-lab
+Run command ls -la to view content of local repo
+
+Step 3 
+Go to your Github account
+Create a personal access token in your Github account to enable you push the repo into your Personal account
+Kindly follow the steps in this link https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+Step 4
+On your command line run git push <url of repo in step 1>
+Verify text file exits in your remote repo.
+
