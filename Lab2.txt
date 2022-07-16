@@ -1,5 +1,5 @@
 Step 1 
-In VScode terminal, run command "git pull https://github.com/awscloudessentials/intro-to-aws-lab.git" to pull the Lab2.txt file into your local machine
+In VScode terminal,cd into the directory "intro-to-aws-lab"and run command "git pull https://github.com/awscloudessentials/intro-to-aws-lab.git" to pull the Lab2.txt file into your local machine
 Open the  .txt file in VScode editor and follow instructions to finish the lab.
 
 Step2  (Create a Key Pair)
