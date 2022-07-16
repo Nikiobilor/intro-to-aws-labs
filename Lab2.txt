@@ -1,5 +1,5 @@
 Step 1 
-In VScode terminal, run command "git clone    ……………." to clone file into your local machine
+In VScode terminal, run command "git pull https://github.com/awscloudessentials/intro-to-aws-lab.git" to pull the Lab2.txt file into your local machine
 Open the  .txt file in VScode editor and follow instructions to finish the lab.
 
 Step2  (Create a Key Pair)
@@ -34,8 +34,8 @@ echo "Hello World from $(hostname -f)" > /var/www/html/index.html
 echo "Healthy" > /var/www/html/health.html
 
 Step 5 (Documentation)
-Modify and update every step you took to achieve the lab, that was not captured in the lab instruction in your local repo and save.
-On the terminal run command “git add < name of file>
-Git commit -m “modified launch template file”
+Modify and update every step you took to achieve the lab, that was not captured in the lab instruction in your local repo Lab2.txt file and save.
+On the terminal run command git add Lab2.txt
+Git commit -m “launch template demo”
 Push to your personal repo.
 
