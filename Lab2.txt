@@ -1,0 +1,41 @@
+Step 1 
+In VScode terminal, run command "git clone    ……………." to clone file into your local machine
+Open the  .txt file in VScode editor and follow instructions to finish the lab.
+
+Step2  (Create a Key Pair)
+Login into your AWS Console 
+Create a Key pair with name "Linux" and key file format ".pem"
+Download pem file into your local machine
+
+Step 3(Create Security group)
+Create a Security Group with name “PublicSG” and give it any description you prefer
+Select your default VPC
+With the following  Inbound rule
+Type      Source
+SSH         My IP
+HTTP       Anywhere IPv4
+HTTP       Anywhere IPv6
+
+Step 4 (Create a Launch Template)
+Create Launch template , give it a name and description you prefer.
+Select “Amazon Linux 2 AMI “ under Application and OS Images
+Select “t2micro “ for instance type
+Select your pre-created Key pair you created in step 2
+Select existing security group and select the one you created in step 3
+
+Open up the “Advanced details” tab and scroll to “User data” and paste the below script
+#!/bin/bash
+# Please make sure to launch Amazon Linux 2
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+echo "Healthy" > /var/www/html/health.html
+
+Step 5 (Documentation)
+Modify and update every step you took to achieve the lab, that was not captured in the lab instruction in your local repo and save.
+On the terminal run command “git add < name of file>
+Git commit -m “modified launch template file”
+Push to your personal repo.
+
