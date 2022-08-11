@@ -35,6 +35,32 @@ Where you still able to access the object?
 What do you think is the difference?
 
 Step 6
+Go back to the permissions tab, unselect "Block public access"
+Verify you can now access the object via the URL
+Scroll to Access control list(ACL) -->select ACLs disabled 
+Try to access the object URL
+Scroll to Bucket policy -->click edit and paste json policy below(replace this DOC-EXAMPLE-BUCKET with your bucket name)
+Save changes and verify if you have access via the object url
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicRead",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject",
+                "s3:GetObjectVersion"
+            ],
+            "Resource": [
+                "arn:aws:s3:::DOC-EXAMPLE-BUCKET/*"
+            ]
+        }
+    ]
+}
+
+
+Step 6
 Once confirmed, kindly clean up your AWS account.Delete your object and bucket.
 Edit the file in VSCode editor, save and push to your personal remote repo.
 
@@ -59,13 +85,3 @@ Edit the file in VSCode editor, save and push to your personal remote repo.
 
 
 
-
-
-
-
-
-
-
-
-
-What is the difference between bucket ownership and object write?
